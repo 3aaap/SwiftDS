@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol Comparable {
-    associatedtype Compare
-    func compare(otherElement: Compare) -> ComparisonResult
-}
-
-class BinaryHeap<E>{
+class BinaryHeap<E : Comparable>{
     
     typealias CompareBlock = (E, E) -> ComparisonResult
     
@@ -21,15 +16,29 @@ class BinaryHeap<E>{
     private var _elements: [E]?
     private var _compare: CompareBlock?
     
-    // MARK: 构造方法 - 批量建堆
-    convenience init(withArray elements: Array<E>, _ compare: CompareBlock?){
-        self.init()
-        
+    // MARK: 构造方法
+    // 批量建堆 且 自定义比较compare
+    init(_ elements: Array<E>, _ compare: CompareBlock?){
         _elements = elements;
         _compare = compare
         _size = elements.count
         
         self.heapify()
+    }
+    
+    // 批量建堆
+    convenience init(_ elements: Array<E>){
+        self.init(elements, nil)
+    }
+    
+    // 自定义比较
+    convenience init(_ compare: CompareBlock?){
+        self.init([], compare)
+    }
+    
+    // 无参构造
+    convenience init() {
+        self.init([], nil)
     }
     
     // MARK: 对外接口
@@ -155,7 +164,7 @@ class BinaryHeap<E>{
             return _compare!(o1, o2)
         }
         
-        return ComparisonResult.orderedSame
+        return o1 == o2 ? ComparisonResult.orderedSame : (o1 > o2 ? ComparisonResult.orderedAscending : ComparisonResult.orderedDescending)
     }
 }
 
