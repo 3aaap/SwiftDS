@@ -15,6 +15,7 @@
 		379403CA28E1BEB700E2775A /* BinaryHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CA58C28E146DD00363530 /* BinaryHeap.swift */; };
 		37BD662228F90B6C00954352 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD662028F90B6C00954352 /* Queue.swift */; };
 		37BD662328F90B6C00954352 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD662128F90B6C00954352 /* Stack.swift */; };
+		37BD664028FE456100954352 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD663F28FE456100954352 /* UnionFind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		375CA58C28E146DD00363530 /* BinaryHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryHeap.swift; sourceTree = "<group>"; };
 		37BD662028F90B6C00954352 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		37BD662128F90B6C00954352 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		37BD663F28FE456100954352 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				153858B728DD556D0025A4C0 /* SwiftDS.h */,
 				153858B828DD556D0025A4C0 /* SwiftDS.docc */,
 				153858CE28DDA0450025A4C0 /* LinearList.swift */,
+				37BD663F28FE456100954352 /* UnionFind.swift */,
 				375CA58C28E146DD00363530 /* BinaryHeap.swift */,
 				37BD662128F90B6C00954352 /* Stack.swift */,
 				37BD662028F90B6C00954352 /* Queue.swift */,
@@ -210,6 +213,7 @@
 				37BD662328F90B6C00954352 /* Stack.swift in Sources */,
 				379403CA28E1BEB700E2775A /* BinaryHeap.swift in Sources */,
 				153858B928DD556D0025A4C0 /* SwiftDS.docc in Sources */,
+				37BD664028FE456100954352 /* UnionFind.swift in Sources */,
 				37BD662228F90B6C00954352 /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
